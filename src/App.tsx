@@ -1,17 +1,10 @@
-import Datepicker from "./components/Datepicker"
-import { useState } from "react"
-
+import DatePick from "./components/Datepick";
 
 function App() {
-const [selectedDate, setSelectedDate] = useState(null)
   return (
-    <>
-      <Datepicker
-        selected={selectedDate}
-        onChange={date => setSelectedDate(date)}
-        dateFormat= "ddd/MM/yyyy"
-      />
-    </>
+    <div>
+       <DatePick />
+    </div>
   )
 }
 
