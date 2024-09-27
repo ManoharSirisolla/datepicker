@@ -10,8 +10,8 @@ const DatePick: React.FC = () => {
     };
 
     return(
-      <div className="flex flex-col items-center p-6">
-        <h2 className="text-lg font-bold  mb-4">Select Date:</h2>
+      <div className="flex flex-col items-center p-6 bg-black-500">
+        <h2 className="text-lg font-bold  mb-4 text-red-500">Choose a Date:</h2>
         <DatePicker
           selected={selectedDate}
           onChange={handleDateChange}
