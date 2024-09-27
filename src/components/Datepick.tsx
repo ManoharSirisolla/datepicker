@@ -10,18 +10,18 @@ const DatePick: React.FC = () => {
     };
 
     return(
-      <div className="flex flex-col items-center p-4">
-        <h2 className="text-lg font-semibold  mb-2">Select Date:</h2>
+      <div className="flex flex-col items-center p-6">
+        <h2 className="text-lg font-bold  mb-4">Select Date:</h2>
         <DatePicker
           selected={selectedDate}
           onChange={handleDateChange}
           dateFormat="dd/MM/yyyy"
-          className="px-4 py-2 border rounde-lg shadow-sm focus:ring focus:ring-indigo-500"
+          className="px-6 py-4 border"
         />
         {selectedDate && (
-          <div className="mt-4">
-            <p className="text-sm text-gray-600">
-              <span className="font-semibold">Selected Date: {selectedDate.toDateString()}</span>
+          <div className="mt-3">
+            <p className="text-sm text-black-600">
+              <span className="font-bold">Selected Date: {selectedDate.toDateString()}</span>
               </p>
           </div>
         )}
