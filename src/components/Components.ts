@@ -14,6 +14,8 @@ interface Components {
   setNthDayOfMonth: (day: number) => void;
 }
 
+
+
 export const ComponentsS = create<Components>((set) => ({
   startDate: null,
   endDate: null,
@@ -22,7 +24,6 @@ export const ComponentsS = create<Components>((set) => ({
   daysOfWeek: [],
   nthDayOfMonth: 1,
   updateStartDate: (date) => set({ startDate: date }),
-  updateEndDate: (date) => set({ endDate: date }),
   setRecurrenceType: (type) => set({ recurrenceType: type }),
   setFrequency: (frequency) => set({ frequency }),
   setDaysOfWeek: (days) => set({ daysOfWeek: days }),
