@@ -3,7 +3,7 @@ import { ComponentsS } from "./Components";
 
 
 const DatePick: React.FC = () => {
-  const { startDate, endDate, updateStartDate, updateEndDate } = ComponentsS();
+  const { startDate, updateStartDate,  } = ComponentsS();
 
   return (
     <div className="space-y-4">
@@ -13,16 +13,6 @@ const DatePick: React.FC = () => {
           type="date"
           value={startDate ? startDate.toISOString().split('T')[0] : ''}
           onChange={(e) => updateStartDate(new Date(e.target.value))}
-          className="border p-2 rounded"
-        />
-      </div>
-
-      <div>
-        <label>End Date (Optional):</label>
-        <input
-          type="date"
-          value={endDate ? endDate.toISOString().split('T')[0] : ''}
-          onChange={(e) => updateEndDate(new Date(e.target.value))}
           className="border p-2 rounded"
         />
       </div>

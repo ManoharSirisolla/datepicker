@@ -3,13 +3,11 @@ import { create } from "zustand";
 
 interface Components {
   startDate: Date | null;
-  endDate: Date | null;
   recurrenceType: 'daily' | 'weekly' | 'monthly' | 'yearly';
   frequency: number;
   daysOfWeek: number[];
   nthDayOfMonth: number;
   updateStartDate: (date: Date | null) => void;
-  updateEndDate: (date: Date | null) => void;
   setRecurrenceType: (type: 'daily' | 'weekly' | 'monthly' | 'yearly') => void;
   setFrequency: (frequency: number) => void;
   setDaysOfWeek: (days: number[]) => void;
