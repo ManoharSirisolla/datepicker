@@ -1,24 +1,24 @@
-import React from "react"
-import { ComponentsS } from "./Components"
+import { ComponentsS } from "./Components";
 
 
 const Recurrence: React.FC = () => {
-    const { frequency, setFrequency } = ComponentsS();
+  const { recurrenceType, setRecurrenceType } = ComponentsS();
+
   return (
-    <div className="p-4">
-      <label>Recurrence</label>
+    <div className="space-y-4">
+      <label>Recurrence Pattern:</label>
       <select
-        value={frequency}
-        onChange={(e) => setFrequency(e.target.value as 'Daily' | 'Weekly' | 'Monthly' | 'Yearly')}
-        className="border border-gray-300 p-2 rounded-lg"
+        value={recurrenceType}
+        onChange={(e) => setRecurrenceType(e.target.value as 'daily' | 'weekly' | 'monthly' | 'yearly')}
+        className="border p-2 rounded"
       >
-        <option value="Daily">Daily</option>
-        <option value="Weekly">Weekly</option>
-        <option value="Monthly">Monthly</option>
-        <option value="Yearly">Yearly</option>
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option>
+        <option value="yearly">Yearly</option>
       </select>
     </div>
-  )
-}
+  );
+};
 
-export default Recurrence
+export default Recurrence;

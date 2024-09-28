@@ -1,21 +1,33 @@
-import React from 'react'
-import DatePicker from 'react-datepicker'
-import { ComponentsS } from './Components'
+import { ComponentsS } from "./Components";
+
+
 
 const DatePick: React.FC = () => {
-    const { startDate, setStartDate } = ComponentsS();
+  const { startDate, endDate, updateStartDate, updateEndDate } = ComponentsS();
+
   return (
-    <div className='p-4 max-w-sm mx-auto'>
+    <div className="space-y-4">
       <div>
-        <label>Select Date:</label>
-        <DatePicker 
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
-            className='"border border-gray-300 p-2 rounded-lg'
+        <label>Start Date:</label>
+        <input
+          type="date"
+          value={startDate ? startDate.toISOString().split('T')[0] : ''}
+          onChange={(e) => updateStartDate(new Date(e.target.value))}
+          className="border p-2 rounded"
+        />
+      </div>
+
+      <div>
+        <label>End Date (Optional):</label>
+        <input
+          type="date"
+          value={endDate ? endDate.toISOString().split('T')[0] : ''}
+          onChange={(e) => updateEndDate(new Date(e.target.value))}
+          className="border p-2 rounded"
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DatePick
+export default DatePick;
